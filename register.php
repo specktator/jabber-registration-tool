@@ -20,7 +20,11 @@ require ("class.jabber.php") ;
 $jabber = new Jabber ;
 
 // connect() variables
+$getDns = dns_get_record("_xmpp-client._tcp.".$_POST['server'],DNS_SRV);
+
+// $jabber->server = $getDns[0]['target'] ;
 $jabber->server = $_POST['server'] ;
+$jabber->hostname = $getDns[0]['target'];
 $jabber->port = "5222" ;
 
 // AccountRegistration() variables

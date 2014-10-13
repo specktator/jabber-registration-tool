@@ -88,6 +88,7 @@
 class Jabber
 {
 	var $server;
+	var $hostname;
 	var $port;
 	var $username;
 	var $password;
@@ -129,6 +130,7 @@ class Jabber
 	function Jabber()
 	{
 		$this->server				= "localhost";
+		$this->hostname				= "localhost";
 		$this->port					= "5222";
 
 		$this->username				= "larry";
@@ -181,7 +183,7 @@ class Jabber
 
 		$this->CONNECTOR = new $this->connection_class;
 
-		if ($this->CONNECTOR->OpenSocket($this->server, $this->port))
+		if ($this->CONNECTOR->OpenSocket($this->hostname, $this->port))
 		{
 			$this->SendPacket("<?xml version='1.0' encoding='UTF-8' ?" . ">\n");
 			$this->SendPacket("<stream:stream to='{$this->server}' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'>\n");
