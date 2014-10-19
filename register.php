@@ -13,6 +13,7 @@
 <h1>Jabber Registeration Tool :: Registering a Jabber I.D. (JID)</h1>
 
 <?php
+session_start();
 
 // load the class.jabber.php
 require ("class.jabber.php") ;
@@ -41,6 +42,24 @@ $continue = "yes" ;
 else {
 echo ("<div class=\"alert alert-danger\" role=\"alert\" >Checking password: Error: Passwords don't match, please <a href=\"./\">try again</a>.</div>") ;
 }
+
+
+// SECUREIMAGE
+
+include_once 'securimage/securimage.php';
+$securimage = new Securimage();
+
+
+if ($securimage->check($_POST['captcha_code']) == false) {
+  // the code was incorrect
+  // you should handle the error so that the form processor doesn't continue
+
+  // or you can use the following code if there is no validation or you do not know how
+  echo "<div class=\"alert alert-danger\" role=\"alert\" >The security code entered was incorrect.</div>";
+  echo "<div class=\"alert alert-danger\" role=\"alert\" >Please go <a href='javascript:history.go(-1)'>back</a> and try again.</div>";
+  exit;
+}
+
 
 // connect to jabber server (if $continue equals "yes", then the passwords must match)
 if ($continue == "yes") {
