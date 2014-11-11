@@ -82,9 +82,14 @@
             <div class="form-group">
               <label for="email"><font color="red">6.</font> Create account</label>
               <p>If you have filled the required fields and take note on your <b>username</b>, <b>server</b>, <b>password</b> and <b>security</b> code (below), click on the button to proceed to create your new Jabber account.</p>
-              <img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" />
-              <input type="text" name="captcha_code" size="10" maxlength="6" />
-              <a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
+              <div class="panel panel-primary">
+                <div class="panel-heading">Captcha</div>
+                <div class="panel-body">
+                  <img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image">
+                  <input name="captcha_code" size="10" maxlength="6" type="text">
+                  <a href="#" class="btn btn-success" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
+                </div>
+              </div>
               <input class="btn btn-success" value="Create account" type="submit">
               <!-- <input type="reset" value="Reset Form"> -->
             </div>
