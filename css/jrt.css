@@ -1,0 +1,17 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.tlogo {
+	height: 28px;
+	margin-top: -6px;
+    margin-left: 20px;
+}
+.githublogo {
+	height: 28px;
+	margin-top: -6px;
+    margin-left: 2px;
+}
