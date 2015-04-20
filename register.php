@@ -84,7 +84,7 @@ break ;
 
 case 2:
 echo ("<div class=\"alert alert-success\" role=\"alert\" >JID '$jabber->username@$jabber->server' successfully registered with Jabber server '$jabber->server'. Now 
-fire up your Jabber client (<a href=\"http://totallynoob.com/free-im-voip-overview/\">download one here</a> if you haven't 
+fire up your Jabber client (<a href=\"http://xmpp.org/xmpp-software/clients/\">download one here</a> if you haven't 
 already and login!") ;
 break ;
 
