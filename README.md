@@ -14,7 +14,8 @@ Xmpp servers are commonly used along with DNS SRV records in order clients to di
 
 <h1>What's changed:</h1>
 
-I've added to [register.php](/register.php/) [dns_get_record()](http://php.net/manual/en/function.dns-get-record.php) command to resolve user's xmpp server and set the actual hostname of the server to [var $hostname](/class.jabber.php/), which is also added by me, in order [OpenSocket](/class.jabber.php/) method to correctly connect to the appropriate hostname.
+* I've added to [register.php](/register.php/) [dns_get_record()](http://php.net/manual/en/function.dns-get-record.php) command to resolve user's xmpp server and set the actual hostname of the server to [var $hostname](/class.jabber.php/), which is also added by me, in order [OpenSocket](/class.jabber.php/) method to correctly connect to the appropriate hostname.
+* Captcha added (secureimage php library)
 
 <h2>Contact details:</h2>
 * jid & email: specktator //\\at\\// totallynoob.com
